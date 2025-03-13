@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About Us - Car Rental</title>
+  <style>
+    /* General Styles */
+    body {
+      font-family: 'Arial', sans-serif;
+      background: linear-gradient(135deg, #6a11cb, #2575fc);
+      color: #fff;
+      margin: 0;
+      padding: 0;
+      line-height: 1.6;
+    }
+
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 20px;
+    }
+
+    h1, h2 {
+      text-align: center;
+      animation: fadeIn 1s ease-in-out;
+    }
+
+    h1 {
+      font-size: 3rem;
+      margin-bottom: 20px;
+    }
+
+    h2 {
+      font-size: 2rem;
+      margin-top: 40px;
+      margin-bottom: 20px;
+    }
+
+    /* FAQ Section */
+    .faq-container {
+      background: rgba(255, 255, 255, 0.1);
+      padding: 20px;
+      border-radius: 15px;
+      margin-bottom: 40px;
+      animation: slideIn 1s ease-in-out;
+    }
+
+    .faq-item {
+      margin-bottom: 15px;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+      padding-bottom: 15px;
+    }
+
+    .faq-question {
+      font-size: 1.2rem;
+      font-weight: bold;
+      cursor: pointer;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      transition: color 0.3s ease;
+    }
+
+    .faq-question:hover {
+      color: #ffcc00;
+    }
+
+    .faq-answer {
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.5s ease, padding 0.5s ease;
+    }
+
+    .faq-answer p {
+      margin: 10px 0 0;
+    }
+
+    .faq-item.active .faq-answer {
+      max-height: 200px;
+      padding-top: 10px;
+    }
+
+    /* Map Section */
+    .map-container {
+      background: rgba(255, 255, 255, 0.1);
+      padding: 20px;
+      border-radius: 15px;
+      margin-bottom: 40px;
+      animation: slideIn 1s ease-in-out;
+    }
+
+    .map-container iframe {
+      width: 100%;
+      height: 400px;
+      border: none;
+      border-radius: 10px;
+    }
+
+    /* Animations */
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+        transform: translateY(-20px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    @keyframes slideIn {
+      from {
+        opacity: 0;
+        transform: translateX(-20px);
+      }
+      to {
+        opacity: 1;
+        transform: translateX(0);
+      }
+    }
+
+    /* Background Animation */
+    body::before {
+      content: '';
+      position: absolute;
+      top: -50%;
+      left: -50%;
+      width: 200%;
+      height: 200%;
+      background: radial-gradient(circle, rgba(255, 255, 255, 0.1), transparent);
+      animation: rotate 10s linear infinite;
+      z-index: -1;
+    }
+
+    @keyframes rotate {
+      from {
+        transform: rotate(0deg);
+      }
+      to {
+        transform: rotate(360deg);
+      }
+    }
+
+    /* Responsive Design */
+    @media (max-width: 768px) {
+      h1 {
+        font-size: 2rem;
+      }
+      h2 {
+        font-size: 1.5rem;
+      }
+      .map-container iframe {
+        height: 300px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>About Us</h1>
+    <p style="text-align: center; animation: fadeIn 1s ease-in-out;">
+      Welcome to MB tour and travels ! We provide the best vehicles for your journey, ensuring comfort, safety, and affordability ❤️❤️❤️❤️.
+    </p>
+
+    <!-- FAQ Section -->
+    <h2>Frequently Asked Questions</h2>
+    <div class="faq-container">
+      <div class="faq-item">
+        <div class="faq-question">
+          What types of cars do you offer?
+          <span>▼</span>
+        </div>
+        <div class="faq-answer">
+          <p>We offer a variety of cars, including Dzire, Innova, and more. Check our booking form for the full list.</p>
+        </div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-question">
+          How can I book a car?
+          <span>▼</span>
+        </div>
+        <div class="faq-answer">
+          <p>You can book a car by filling out the booking form on our website or visiting our office.</p>
+        </div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-question">
+          Do we offer bikes and scooty also?
+          <span>▼</span>
+        </div>
+        <div class="faq-answer">
+          <p>Yes we offer bikes and scooty also to book contact through whatsapp or in person in our office.</p>
+        </div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-question">
+          How can I contact you for more details?
+          <span>▼</span>
+        </div>
+        <div class="faq-answer">
+          <p>You can reach us via WhatsApp, call,  or visit our office in Jeolikot Nainital for in-person assistance our contact is 7055673573.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Map Section -->
+    <h2>Our Location</h2>
+    <div class="map-container">
+      <iframe
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3503.869294746091!2d77.2099043150816!3d28.57208298244138!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390ce2a5f5f5f5f5%3A0x5f5f5f5f5f5f5f5f!2sCar%20Rental%20Service!5e0!3m2!1sen!2sin!4v1631234567890!5m2!1sen!2sin"
+        allowfullscreen=""
+        loading="lazy">
+      </iframe>
+    </div>
+  </div>
+
+  <script>
+    // FAQ Interaction
+    const faqItems = document.querySelectorAll('.faq-item');
+    faqItems.forEach(item => {
+      item.addEventListener('click', () => {
+        item.classList.toggle('active');
+      });
+    });
+  </script>
+</body>
+</html>
